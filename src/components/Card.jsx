@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { productQuantity, shortenTex } from "../helpers/helper";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, decrease, increase, removeItem } from "../features/cart/cartSlice";
-import { useEffect } from "react";
+
 
 
 
@@ -19,9 +19,7 @@ const Card = ({data}) => {
     const dispatch=useDispatch();
     const quantity= productQuantity(state, id);
 
-   useEffect(()=>{
-    localStorage.setItem("cart",JSON.stringify(state))
-   },[state])
+ 
     
     
   return (
